@@ -6,3 +6,14 @@ TIMEFMT='%J   %U  user %S system %P cpu %*E total'$'\n'\
 'max memory:                %M MB'$'\n'\
 'page faults from disk:     %F'$'\n'\
 'other page faults:         %R'
+
+
+alias kk="kubectl"
+
+# source
+# https://blog.jayway.com/2012/09/08/finding-the-pid-listening-on-a-specific-port-on-mac-os-x/
+pidportfunction() {
+  lsof -n -i4TCP:$1 | grep LISTEN
+}
+
+alias pidport=pidportfunction
