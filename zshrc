@@ -17,3 +17,10 @@ pidportfunction() {
 }
 
 alias pidport=pidportfunction
+
+# git commit hash
+alias git-golang-sha="TZ=UTC git --no-pager show \
+  --quiet \
+  --abbrev=12 \
+  --date='format-local:%Y%m%d%H%M%S' \
+  --format='%cd-%h'"
